@@ -1,0 +1,564 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: rgba(245, 245, 245, 1);
+    font-family: 'Junge', serif;
+    font-family: 'PT Serif', serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lora', serif;
+}
+
+/*Header*/
+
+#nav-bar{
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    background-color: rgba(216, 226, 220, 1);
+    width: 100%;
+    height: 5em;
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    padding-top: 2em;
+    opacity: 80%;
+}
+
+a{
+    margin: 5em;
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(1, 48, 48);
+}
+
+a:hover{
+    text-decoration: underline;
+    color: rgb(1, 48, 48);
+}
+
+#head-img{
+    position: relative;
+    z-index: 1;
+}
+
+#image-header{
+    width: 100%;
+    height: auto;
+    opacity: 50%;
+}
+
+#head-txt{
+    position: absolute;
+    z-index: 3;
+    top: 30em;
+    padding: 3em;
+    font-family: 'Junge', serif;
+}
+
+h1{
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 70px;
+    font-weight: 500;
+}
+
+#tittle{
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 60px;
+}
+
+/*Main*/
+
+    /*A propos*/
+
+.main-txt{
+    margin-top: 70px;
+    height: auto;
+}
+
+h2{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+hr{
+    width: 40%;
+    opacity: 70%;
+}
+
+#descriptions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+}
+
+#description1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 3em;
+}
+
+#femme{
+    width: auto;
+    height: auto;
+}
+
+#textdescription1{
+    font-family: 'Junge', serif;
+    font-size: 18px;
+}
+
+#textdescription2{
+    max-width: 75%;
+    margin-left: 3em;
+    margin-right: 3em;
+    font-size: 23px;
+    font-family: 'Junge', serif;
+}
+
+#cvcontact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#cv{
+    width: 12em;
+    padding: 1em;
+    height: auto;
+    background-color: rgba(216, 226, 220, 1);
+    border: 1px solid rgba(154, 173, 161, 1);
+    border-radius: 10px;
+}
+
+#contact{
+    width: 12em;
+    padding: 1em;
+    height: auto;
+    background-color: rgba(216, 226, 220, 1);
+    border: 1px solid rgba(154, 173, 161, 1);
+    border-radius: 10px;
+}
+
+#cv:hover{
+    background-color: rgba(154, 173, 161, 1);
+    color: rgb(2, 44, 17);
+    border: 1px solid rgb(16, 65, 34);
+    text-decoration: none;
+}
+
+#contact:hover{
+    background-color: rgba(154, 173, 161, 1);
+    color: rgb(2, 44, 17);
+    border: 1px solid rgb(16, 65, 34);
+    text-decoration: none;
+}
+
+    /*Mon expérience*/
+
+        /*Timeline*/
+
+*{
+    box-sizing: border-box;
+}
+
+        /* The actual timeline (the vertical ruler) */
+
+.timeline{
+    font-family: 'Junge', serif;
+    font-size: 17px;
+    background-color: rgba(255, 202, 212, 0.35);
+    position: relative;
+    max-width: 100%;
+}
+
+        /* The actual timeline (the vertical ruler) */
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgba(157, 129, 137, 1);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+        /* Container around content */
+
+.container{
+    padding: 10px 40px;
+    position: relative;
+    background-color: none;
+    width: 50%;
+}
+
+        /* The circles on the timeline */
+
+.container::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: rgba(157, 129, 137, 1);
+    border: 2px solid rgb(75, 34, 45);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+        /* Place the container to the left */
+
+.left{
+    left: 0;
+}
+
+        /* Place the container to the right */
+
+.right{
+    left: 50%;
+}
+
+        /* Add arrows to the left container (pointing right) */
+
+.left::before{
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid rgba(244, 172, 183, 1);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(244, 172, 183, 1);
+}
+
+        /* Add arrows to the right container (pointing left) */
+
+.right::before{
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid rgba(244, 172, 183, 1);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(244, 172, 183, 1) transparent transparent;
+}
+
+        /* Fix the circle for containers on the right side */
+
+.right::after{
+    left: -16px;
+}
+
+        /* The actual content */
+
+.content{
+    padding: 20px 30px;
+    background-color: rgba(244, 172, 183, 0.5);
+    border: 1px solid rgba(157, 129, 137, 1);
+    color: rgb(63, 2, 11);
+    position: relative;
+    border-radius: 6px;
+}
+
+    /*Mes compétences*/
+
+#cartes{
+    font-family: 'Junge', serif;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.carte{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    color: rgb(37, 1, 7);
+    margin: 0;
+    padding: 0;
+    height: 21em;
+    background-color: rgba(255, 202, 212, 0.5);
+    border-radius: 10px;
+}
+
+.tittlecompetence{
+    width: 11em;
+    background-color: rgba(157, 129, 137, 1);
+    border: 1px solid rgba(157, 129, 137, 1);
+    border-radius: 10px 10px 0px 0px ;
+}
+
+.imgcarte{
+    width: 8em;
+    height: auto;
+}
+
+    /*Mes projets*/
+
+#projets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+}
+
+.snip1585{
+    background-color: rgba(244, 172, 183, 0.3);
+    border: 1px solid rgb(56, 4, 13) ;
+    border-radius: 10px;
+    color: rgb(56, 4, 13);
+    display: inline-block;
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    margin: 10px;
+    max-width: 315px;
+    min-width: 230px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.snip1585 *{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.45s ease;
+    transition: all 0.45s ease;
+}
+
+.snip1585:before, .snip1585:after{
+    background-color: rgba(244, 172, 183, 0.4);
+    border-top: 50px solid rgba(157, 129, 137, 0.9);
+    border-bottom: 50px solid rgba(157, 129, 137, 0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+}
+
+.snip1585:before{
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+}
+
+.snip1585:after{
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+}
+
+.snip1585 img{
+    vertical-align: top;
+    max-width: 100%;
+    backface-visibility: hidden;
+}
+
+.snip1585 figcaption{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1em;
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.snip1585 h3{
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.snip1585 h3 span{
+    display: block;
+    font-weight: 800;
+}
+
+.snip1585 a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.snip1585:hover > img, .snip1585.hover > img{
+    opacity: 0.7;
+}
+
+.snip1585:hover:before, .snip1585.hover:before, .snip1585:hover:after, .snip1585.hover:after{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.snip1585:hover figcaption, .snip1585.hover figcaption{
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+    /*Me contacter*/
+
+        /*Téléphone*/
+
+.mecontacter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', serif;  
+}
+
+#contacttel{
+    width: fit-content;
+    height: auto;
+    background-color: rgba(251, 236, 236, 0.45);
+    border: 1px solid rgba(157, 129, 137, 1);
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#iconenum{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#tel{
+    width: auto;
+    height: 35px;
+}
+
+        /*Formulaire de contact*/
+
+#formulaire{
+    font-family: 'Lora', serif;
+    margin-bottom: 3em;
+    width: fit-content;
+    height: auto;
+    background-color: rgba(251, 236, 236, 0.45);
+    border: 1px solid rgba(157, 129, 137, 1);
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#btn_valider{
+    font-family: 'Lora', serif;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: fit-content;
+    padding: 0.4em;
+    height: auto;
+    background-color: rgba(157, 129, 137, 1);
+    border: 1px solid rgba(157, 129, 137, 1);
+    border-radius: 5px;
+}
+
+#btn_valider:hover{
+    background-color: rgba(255, 202, 212, 0.5);
+}
+
+
+/*Deuxième page validation de formulaire*/
+
+#titrevalidform{
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 35px;
+}
+
+#boutonreturnaccueil{
+    margin-bottom: 7em;
+    text-align: center;
+}
+
+#returnaccueil{
+    width: fit-content;
+    padding: 1em;
+    height: auto;
+    background-color: rgba(216, 226, 220, 1);
+    border: 1px solid rgba(154, 173, 161, 1);
+    border-radius: 10px;
+}
+
+#returnaccueil:hover{
+    background-color: rgba(154, 173, 161, 1);
+    color: rgb(2, 44, 17);
+    border: 1px solid rgb(16, 65, 34);
+    text-decoration: none;
+}
+
+/*Ancre*/
+
+#ancre{
+    margin: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(216, 226, 220, 1);
+}
+
+#footer{
+    padding: 0.5em;
+    padding-top: 0.8em;
+    text-align: center;
+    color: rgb(1, 48, 48);;
+}
+
+#linkdn{
+    width: auto;
+    height: 40px;
+}
+
+#mail{
+    width: 40px;
+    height: auto;
+}
+
+#textfoot{
+    font-size: 13px;
+}
