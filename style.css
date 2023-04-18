@@ -2,6 +2,7 @@ body, html{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     background-color: rgba(245, 245, 245, 1);
     font-family: 'Junge', serif;
     font-family: 'PT Serif', serif;
@@ -13,7 +14,7 @@ body, html{
 
 #nav-bar{
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     top: 0px;
     background-color: rgba(216, 226, 220, 1);
     width: 100%;
@@ -125,6 +126,7 @@ hr{
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    z-index: 5;
 }
 
 #cv{
@@ -313,12 +315,12 @@ hr{
 
     /*Mes projets*/
 
+        /*Projet 1*/
 #projets{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: auto;
-    height: fit-content;
 }
 
 .snip1585{
@@ -432,6 +434,119 @@ hr{
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
 }
+        /*Projet 2*/
+
+.snip1586{
+    background-color: rgba(244, 172, 183, 0.3);
+    border: 1px solid rgb(56, 4, 13) ;
+    border-radius: 10px;
+    color: rgb(56, 4, 13);
+    display: inline-block;
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    margin: 10px;
+    max-width: 315px;
+    min-width: 230px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.snip1586 *{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.45s ease;
+    transition: all 0.45s ease;
+}
+
+.snip1586:before, .snip1586:after{
+    background-color: rgba(244, 172, 183, 0.4);
+    border-top: 50px solid rgba(157, 129, 137, 0.9);
+    border-bottom: 50px solid rgba(157, 129, 137, 0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+}
+
+.snip1586:before{
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+}
+
+.snip1586:after{
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+}
+
+.snip1586 img{
+    vertical-align: top;
+    max-width: 100%;
+    backface-visibility: hidden;
+}
+
+.snip1586 figcaption{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1em;
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.snip1586 h3{
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.snip1586 h3 span{
+    display: block;
+    font-weight: 800;
+}
+
+.snip1586 a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.snip1586:hover > img, .snip1586.hover > img{
+    opacity: 0.7;
+}
+
+.snip1586:hover:before, .snip1586.hover:before, .snip1586:hover:after, .snip1586.hover:after{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.snip1586:hover figcaption, .snip1586.hover figcaption{
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
 
     /*Me contacter*/
 
@@ -439,93 +554,42 @@ hr{
 
 .mecontacter{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-family: 'Lora', serif;  
+    font-family: 'Lora', serif;
 }
 
 #contacttel{
-    width: fit-content;
+    width: 13em;
     height: auto;
-    background-color: rgba(251, 236, 236, 0.45);
-    border: 1px solid rgba(157, 129, 137, 1);
-    border-radius: 8px;
+    background-color: rgba(216, 226, 220, 0.65);
+    border: 1px solid rgba(154, 173, 161, 1);
+    border-radius: 20px;
     font-size: 18px;
     text-align: center;
-}
-
-#iconenum{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
 }
 
 #tel{
     width: auto;
-    height: 35px;
+    height: 25px;
 }
 
-        /*Formulaire de contact*/
-
-#formulaire{
-    font-family: 'Lora', serif;
-    margin-bottom: 3em;
-    width: fit-content;
+#contactmail{
+    width: 13em;
     height: auto;
-    background-color: rgba(251, 236, 236, 0.45);
-    border: 1px solid rgba(157, 129, 137, 1);
-    border-radius: 8px;
+    background-color: rgba(216, 226, 220, 0.65);
+    border: 1px solid rgba(154, 173, 161, 1);
+    border-radius: 20px;
     font-size: 18px;
     text-align: center;
 }
 
-#btn_valider{
-    font-family: 'Lora', serif;
-    margin-bottom: 10px;
-    cursor: pointer;
-    width: fit-content;
-    padding: 0.4em;
-    height: auto;
-    background-color: rgba(157, 129, 137, 1);
-    border: 1px solid rgba(157, 129, 137, 1);
-    border-radius: 5px;
+#mail{
+    width: auto;
+    height: 25px;
 }
 
-#btn_valider:hover{
-    background-color: rgba(255, 202, 212, 0.5);
-}
-
-
-/*Deuxième page validation de formulaire*/
-
-#titrevalidform{
-    margin-bottom: 60px;
-    text-align: center;
-    font-size: 35px;
-}
-
-#boutonreturnaccueil{
-    margin-bottom: 7em;
-    text-align: center;
-}
-
-#returnaccueil{
-    width: fit-content;
-    padding: 1em;
-    height: auto;
-    background-color: rgba(216, 226, 220, 1);
-    border: 1px solid rgba(154, 173, 161, 1);
-    border-radius: 10px;
-}
-
-#returnaccueil:hover{
-    background-color: rgba(154, 173, 161, 1);
-    color: rgb(2, 44, 17);
-    border: 1px solid rgb(16, 65, 34);
-    text-decoration: none;
-}
-
-/*Ancre*/
+    /*Ancre*/
 
 #ancre{
     margin: 10px;
@@ -552,11 +616,6 @@ footer{
 #linkdn{
     width: auto;
     height: 40px;
-}
-
-#mail{
-    width: 40px;
-    height: auto;
 }
 
 #textfoot{
