@@ -10,6 +10,10 @@ body, html{
     font-family: 'Lora', serif;
 }
 
+p{
+    font-family: 'Junge', serif;
+}
+
 /*Header*/
 
 #nav-bar{
@@ -90,17 +94,15 @@ hr{
 #descriptions{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    text-align: justify;
+    
 }
 
 #description1{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    text-align: justify;
     flex-direction: column;
-    margin-left: 3em;
+    font-family: 'Junge', serif;
 }
 
 #femme{
@@ -109,16 +111,10 @@ hr{
 }
 
 #textdescription1{
-    font-family: 'Junge', serif;
-    font-size: 18px;
-}
-
-#textdescription2{
-    max-width: 75%;
-    margin-left: 3em;
-    margin-right: 3em;
+    width: 60%;
     font-size: 23px;
     font-family: 'Junge', serif;
+    text-align: justify;
 }
 
 #cvcontact{
@@ -138,15 +134,6 @@ hr{
     border-radius: 10px;
 }
 
-#contact{
-    width: 12em;
-    padding: 1em;
-    height: auto;
-    background-color: rgba(216, 226, 220, 1);
-    border: 1px solid rgba(154, 173, 161, 1);
-    border-radius: 10px;
-}
-
 #cv:hover{
     background-color: rgba(154, 173, 161, 1);
     color: rgb(2, 44, 17);
@@ -154,12 +141,7 @@ hr{
     text-decoration: none;
 }
 
-#contact:hover{
-    background-color: rgba(154, 173, 161, 1);
-    color: rgb(2, 44, 17);
-    border: 1px solid rgb(16, 65, 34);
-    text-decoration: none;
-}
+
 
     /*Mon expérience*/
 
@@ -275,319 +257,87 @@ hr{
     border-radius: 6px;
 }
 
+.dates{
+    font-weight: bolder;
+}
+
     /*Mes compétences*/
 
 #cartes{
     font-family: 'Junge', serif;
-    font-size: 18px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    text-align: center;
 }
 
 .carte{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     flex-direction: column;
     width: auto;
+    height: auto;
     color: rgb(37, 1, 7);
-    margin: 0;
-    padding: 0;
-    height: 21em;
     background-color: rgba(255, 202, 212, 0.5);
     border-radius: 10px;
 }
 
 .tittlecompetence{
-    width: 11em;
     background-color: rgba(157, 129, 137, 1);
-    border: 1px solid rgba(157, 129, 137, 1);
     border-radius: 10px 10px 0px 0px ;
 }
 
-.imgcarte{
-    width: 8em;
-    height: auto;
-}
-
-    /*Mes projets*/
-
-        /*Projet 1*/
-#projets{
+.imagescartes{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    width: auto;
 }
 
-.snip1585{
-    background-color: rgba(244, 172, 183, 0.3);
-    border: 1px solid rgb(56, 4, 13) ;
-    border-radius: 10px;
-    color: rgb(56, 4, 13);
-    display: inline-block;
-    font-family: 'Lora', serif;
-    font-size: 28px;
-    margin: 10px;
-    max-width: 315px;
-    min-width: 230px;
-    overflow: hidden;
-    position: relative;
+.textescartes{
+    font-size: 15px;
+    padding: 1em;
+}
+
+.point{
+    width: 20px;
+}
+
+h4{
     text-align: center;
-    width: 100%;
 }
 
-.snip1585 *{
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.45s ease;
-    transition: all 0.45s ease;
-}
+    /*Mes centres d'intérêt*/
 
-.snip1585:before, .snip1585:after{
-    background-color: rgba(244, 172, 183, 0.4);
-    border-top: 50px solid rgba(157, 129, 137, 0.9);
-    border-bottom: 50px solid rgba(157, 129, 137, 0.9);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: '';
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    z-index: 1;
-    opacity: 0;
-}
-
-.snip1585:before{
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2);
-}
-
-.snip1585:after{
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2);
-}
-
-.snip1585 img{
-    vertical-align: top;
-    max-width: 100%;
-    backface-visibility: hidden;
-}
-
-.snip1585 figcaption{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    align-items: center;
-    z-index: 1;
+#centresinteret{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.1em;
-    opacity: 0;
-    z-index: 2;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
-}
-
-.snip1585 h3{
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.snip1585 h3 span{
-    display: block;
-    font-weight: 800;
-}
-
-.snip1585 a{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-}
-
-.snip1585:hover > img, .snip1585.hover > img{
-    opacity: 0.7;
-}
-
-.snip1585:hover:before, .snip1585.hover:before, .snip1585:hover:after, .snip1585.hover:after{
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-}
-
-.snip1585:hover figcaption, .snip1585.hover figcaption{
-    opacity: 1;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
-}
-        /*Projet 2*/
-
-.snip1586{
-    background-color: rgba(244, 172, 183, 0.3);
-    border: 1px solid rgb(56, 4, 13) ;
-    border-radius: 10px;
-    color: rgb(56, 4, 13);
-    display: inline-block;
-    font-family: 'Lora', serif;
-    font-size: 28px;
-    margin: 10px;
-    max-width: 315px;
-    min-width: 230px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-
-.snip1586 *{
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.45s ease;
-    transition: all 0.45s ease;
-}
-
-.snip1586:before, .snip1586:after{
-    background-color: rgba(244, 172, 183, 0.4);
-    border-top: 50px solid rgba(157, 129, 137, 0.9);
-    border-bottom: 50px solid rgba(157, 129, 137, 0.9);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: '';
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    z-index: 1;
-    opacity: 0;
-}
-
-.snip1586:before{
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2);
-}
-
-.snip1586:after{
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2);
-}
-
-.snip1586 img{
-    vertical-align: top;
-    max-width: 100%;
-    backface-visibility: hidden;
-}
-
-.snip1586 figcaption{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     align-items: center;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.1em;
-    opacity: 0;
-    z-index: 2;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+    justify-content: space-around;
 }
 
-.snip1586 h3{
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.snip1586 h3 span{
-    display: block;
-    font-weight: 800;
-}
-
-.snip1586 a{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-}
-
-.snip1586:hover > img, .snip1586.hover > img{
-    opacity: 0.7;
-}
-
-.snip1586:hover:before, .snip1586.hover:before, .snip1586:hover:after, .snip1586.hover:after{
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-}
-
-.snip1586:hover figcaption, .snip1586.hover figcaption{
-    opacity: 1;
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
-}
 
     /*Me contacter*/
 
-        /*Téléphone*/
+    .mecontacter{
+        text-align: center;
+        
+    }
 
-.mecontacter{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Lora', serif;
-}
+    #contactfin{
+        margin-bottom: -1em;
+    }
 
-#contacttel{
-    width: 13em;
-    height: auto;
-    background-color: rgba(216, 226, 220, 0.65);
-    border: 1px solid rgba(154, 173, 161, 1);
-    border-radius: 20px;
-    font-size: 18px;
-    text-align: center;
-}
-
-#tel{
-    width: auto;
-    height: 25px;
-}
-
-#contactmail{
-    width: 13em;
-    height: auto;
-    background-color: rgba(216, 226, 220, 0.65);
-    border: 1px solid rgba(154, 173, 161, 1);
-    border-radius: 20px;
-    font-size: 18px;
-    text-align: center;
-}
-
-#mail{
-    width: auto;
-    height: 25px;
-}
+    #contact{
+        width: 12em;
+        padding: 1em;
+        height: auto;
+        background-color: rgba(216, 226, 220, 1);
+        border: 1px solid rgba(154, 173, 161, 1);
+        border-radius: 10px;
+    }
+    #contact:hover{
+        background-color: rgba(154, 173, 161, 1);
+        color: rgb(2, 44, 17);
+        border: 1px solid rgb(16, 65, 34);
+        text-decoration: none;
+    }
 
     /*Ancre*/
 
@@ -620,4 +370,5 @@ footer{
 
 #textfoot{
     font-size: 13px;
+    font-family: 'Lora', serif;
 }
